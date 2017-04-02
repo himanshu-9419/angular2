@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import {  Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -20,7 +20,7 @@ export class HeroService {
     });
   }
   getHero(id: number): Promise<Hero> {
-    return this.getHeroesAPI()
+    return this.getHeroes()
       .then(heroes => heroes.find(hero => hero.id === id));
   }
 
